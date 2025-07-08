@@ -66,7 +66,7 @@ nb_prob <- predict(nb_model, newdata = test_data[, cat_vars], type = "prob")
 
 
 # threshold
-custom_threshold <- 0.2
+custom_threshold <- 0.3
 nb_custom_pred <- ifelse(nb_prob[, "1"] >= custom_threshold, "1", "0")
 nb_custom_pred <- factor(nb_custom_pred, levels = c("0", "1"))
 
